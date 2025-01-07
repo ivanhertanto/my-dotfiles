@@ -6,7 +6,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- Basic WSL configuration
+-- Basic configuration
 config.default_prog = { "/usr/bin/zsh" }
 config.default_cwd = "~"
 
@@ -113,6 +113,13 @@ config.keys = {
 		mods = "ALT",
 		action = wezterm.action.CloseCurrentPane({ confirm = false }),
 	},
+
+	-- Full Screen
+	{
+    		key = 'n',
+    		mods = 'SHIFT|CTRL',
+    		action = wezterm.action.ToggleFullScreen,
+  	},
 
 	-- Show/Hide Window
 	{
