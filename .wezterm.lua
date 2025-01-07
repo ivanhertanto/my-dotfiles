@@ -121,6 +121,12 @@ config.keys = {
     		action = wezterm.action.ToggleFullScreen,
   	},
 
+	-- Paste Shift + Ins
+	{ 	key = "Insert", 
+		mods = "SHIFT", 
+		action = act.PasteFrom("Clipboard"),
+	},
+
 	-- Show/Hide Window
 	{
 		key = "`",
